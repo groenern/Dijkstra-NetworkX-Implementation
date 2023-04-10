@@ -100,11 +100,10 @@ def on_click(event):
         path_nodes.clear()
         plt.draw()
 
-# Prompt the user for the graph parameters
 n = 12
 p = .25
 
-G = nx.erdos_renyi_graph(n, p, seed=42)
+G = nx.erdos_renyi_graph(n, p)
 for u, v, d in G.edges(data=True):
     d['weight'] = float(random.randint(1, 10))
 
